@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+{%- assign d = site.data[page.lang] -%}
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ d.name }} | {{ d.labels.cv }}</title>
+  <meta name="description" content="{{ d.role }}. {{ d.affiliation }}">
+  <link rel="alternate" hreflang="{{ page.alt_lang }}" href="{{ page.alt_url | relative_url }}">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%237A1F2E'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+<div class="marco">
+
+  <aside class="lateral">
+    <div class="lateral-interior">
+      <div class="herramientas">
+        <a href="{{ page.alt_url | relative_url }}" hreflang="{{ page.alt_lang }}" lang="{{ page.alt_lang }}">{{ d.labels.other_language }}</a>
+        {%- if d.pdf and d.pdf != "" %}
+        <a href="{{ d.pdf | relative_url }}">{{ d.labels.pdf }}</a>
+        {%- endif %}
+      </div>
+
+      <div class="identidad">
+        <div class="datos">
+          <h1>{{ d.name }}</h1>
+        </div>
+      </div>
+
+      <nav class="menu" aria-label="{{ d.labels.contents }}">
+        <button class="menu-boton" type="button" aria-expanded="false" aria-controls="menu-lista" hidden>
+          <span class="menu-actual">{{ d.labels.home }}</span>
+          <span class="menu-icono" aria-hidden="true"></span>
+        </button>
+        <ul class="menu-lista" id="menu-lista">
+          <li><a href="#inicio">{{ d.labels.home }}</a></li>
+          {%- for s in d.sections %}
+          {%- unless s.home or s.hide %}
+          <li><a href="#{{ s.title | slugify: 'latin' }}">{{ s.short | default: s.title }}</a></li>
+          {%- endunless %}
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="principal" id="contenido">
+    <section class="pagina" id="p-inicio">
+      <h2>{{ d.labels.home }}</h2>
+      {%- assign hay_foto = false %}
+      {%- if site.photo and site.photo != "" %}{% assign hay_foto = true %}{% endif %}
+      <div class="presentacion{% if hay_foto %} con-foto{% endif %}{% if site.photo_wide %} foto-ancha{% endif %}">
+        {%- if hay_foto %}
+        <figure class="retrato">
+          <img class="foto" src="{{ site.photo | relative_url }}" alt="{{ d.name }}">
+          {%- if d.photo_caption and d.photo_caption != "" %}
+          <figcaption>{{ d.photo_caption }}</figcaption>
+          {%- endif %}
+        </figure>
+        {%- endif %}
+        <div class="presentacion-texto">
+          <div class="resumen">{{ d.about | markdownify }}</div>
+          {%- if d.links %}
+          <ul class="enlaces">
+            {%- for l in d.links %}
+            <li><a href="{{ l.url }}">{{ l.label }}</a></li>
+            {%- endfor %}
+          </ul>
+          {%- endif %}
+        </div>
+      </div>
+      {%- for s in d.sections %}
+      {%- if s.home and s.hide != true %}
+      <div class="bloque-inicio">
+        {% include seccion.html %}
+      </div>
+      {%- endif %}
+      {%- endfor %}
+    </section>
+
+    {%- for s in d.sections %}
+    {%- unless s.home or s.hide %}
+    <section class="pagina" id="p-{{ s.title | slugify: 'latin' }}">
+      {% include seccion.html %}
+    </section>
+    {%- endunless %}
+    {%- endfor %}
+
+    <nav class="paso" aria-label="{{ d.labels.contents }}" data-anterior="{{ d.labels.previous }}" data-siguiente="{{ d.labels.next }}"></nav>
+
+    <footer class="pie">
+      {%- assign mes = site.time | date: "%-m" | minus: 1 %}
+      <p>{{ d.labels.updated }} {{ d.labels.months[mes] }}{{ d.labels.month_year_separator }}{{ site.time | date: "%Y" }}</p>
+    </footer>
+  </main>
+
+</div>
+
+<script>
+(function () {
+  var paginas = Array.prototype.slice.call(document.querySelectorAll(".pagina"));
+  var enlaces = Array.prototype.slice.call(document.querySelectorAll(".menu-lista a"));
+  var principal = document.getElementById("contenido");
+  var paso = document.querySelector(".paso");
+  var boton = document.querySelector(".menu-boton");
+  var actual = document.querySelector(".menu-actual");
+  var lista = document.getElementById("menu-lista");
+  var tituloBase = document.title;
+
+  // Las páginas tienen id "p-nombre" y el enlace es "#nombre"
+  function clave(pagina) { return pagina.id.slice(2); }
+
+  function nombre(pagina) {
+    var a = document.querySelector('.menu-lista a[href="#' + clave(pagina) + '"]');
+    return a ? a.textContent : "";
+  }
+
+  function enlacePaso(pagina, etiqueta, clase) {
+    var a = document.createElement("a");
+    a.href = "#" + clave(pagina);
+    a.className = clase;
+    var chico = document.createElement("span");
+    chico.className = "paso-etiqueta";
+    chico.textContent = etiqueta;
+    var grande = document.createElement("span");
+    grande.className = "paso-nombre";
+    grande.textContent = nombre(pagina);
+    a.appendChild(chico);
+    a.appendChild(grande);
+    return a;
+  }
+
+  function cerrarMenu() {
+    lista.classList.remove("abierta");
+    boton.setAttribute("aria-expanded", "false");
+  }
+
+  function mostrar(id, desplazar) {
+    var i = 0;
+    for (var k = 0; k < paginas.length; k++) { if (clave(paginas[k]) === id) { i = k; } }
+    var pagina = paginas[i];
+    paginas.forEach(function (p, j) { p.hidden = (j !== i); });
+    enlaces.forEach(function (a) {
+      if (a.getAttribute("href") === "#" + clave(pagina)) { a.setAttribute("aria-current", "page"); }
+      else { a.removeAttribute("aria-current"); }
+    });
+    actual.textContent = nombre(pagina);
+    document.title = i === 0 ? tituloBase : nombre(pagina) + " | " + tituloBase;
+
+    paso.innerHTML = "";
+    if (i > 0) { paso.appendChild(enlacePaso(paginas[i - 1], paso.dataset.anterior, "paso-anterior")); }
+    if (i < paginas.length - 1) { paso.appendChild(enlacePaso(paginas[i + 1], paso.dataset.siguiente, "paso-siguiente")); }
+
+    cerrarMenu();
+    if (desplazar) {
+      var arriba = principal.getBoundingClientRect().top + window.pageYOffset;
+      window.scrollTo(0, window.innerWidth < 960 ? arriba : 0);
+    }
+  }
+
+  boton.hidden = false;
+  boton.addEventListener("click", function () {
+    var abierta = lista.classList.toggle("abierta");
+    boton.setAttribute("aria-expanded", abierta ? "true" : "false");
+  });
+  enlaces.forEach(function (a) { a.addEventListener("click", cerrarMenu); });
+  window.addEventListener("hashchange", function () { mostrar(location.hash.slice(1), true); });
+  mostrar(location.hash.slice(1), false);
+})();
+</script>
+</body>
+</html>

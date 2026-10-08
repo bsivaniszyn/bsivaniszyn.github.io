@@ -1,0 +1,376 @@
+/* ============================================================
+   COLORES Y LETRAS
+   Para cambiar el tono de vino o de gris, cambiá solo estos
+   valores (son códigos de color hexadecimales).
+   ============================================================ */
+:root {
+  --vino:            #7A1F2E;  /* color principal */
+  --vino-suave:      #E6D3D7;  /* vino muy claro (líneas de las entradas) */
+  --subrayado:       #B98A93;  /* subrayado de los enlaces */
+  --texto:           #2A2C30;  /* gris casi negro para el texto */
+  --gris:            #676A72;  /* gris medio (fechas, datos secundarios) */
+  --gris-claro:      #D4D6DA;  /* líneas divisorias */
+  --fondo-lateral:   #F1F1F2;  /* gris muy claro de la columna izquierda */
+  --fondo:           #FFFFFF;
+
+  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --sans:  "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ============================================================
+   BASE
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: var(--serif);
+  font-size: 1.0625rem;
+  line-height: 1.62;
+  border-top: 5px solid var(--vino);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--vino);
+  text-decoration: underline;
+  text-decoration-color: var(--subrayado);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { text-decoration-color: var(--vino); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--vino); outline-offset: 2px; border-radius: 2px; }
+
+p { margin: 0; }
+
+/* ============================================================
+   ESTRUCTURA: columna izquierda fija + página a la derecha
+   ============================================================ */
+.marco {
+  display: grid;
+  grid-template-columns: 19rem minmax(0, 1fr);
+  min-height: calc(100vh - 5px);
+}
+
+.lateral { background: var(--fondo-lateral); }
+
+.lateral-interior {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  overflow-y: auto;
+  padding: 1.5rem 1.75rem 2rem;
+}
+
+.principal {
+  width: 100%;
+  max-width: 56rem;
+  padding: 3.25rem 3.5rem 2rem;
+}
+
+/* ============================================================
+   COLUMNA IZQUIERDA: foto, nombre, menú
+   ============================================================ */
+.herramientas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.1rem;
+  font-family: var(--sans);
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.identidad { margin-top: 2.25rem; }
+
+.datos { margin-top: 0; }
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-weight: 500;
+  font-size: 2.05rem;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--vino);
+}
+
+.enlaces {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.25rem;
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  overflow-wrap: anywhere;
+}
+
+.menu { margin-top: 1.75rem; }
+
+.menu-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+}
+
+.menu-lista a {
+  display: block;
+  padding: 0.3rem 0.75rem;
+  border-left: 2px solid var(--gris-claro);
+  color: var(--texto);
+  text-decoration: none;
+}
+.menu-lista a:hover { color: var(--vino); }
+.menu-lista a[aria-current="page"] {
+  border-left-color: var(--vino);
+  color: var(--vino);
+  font-weight: 600;
+}
+
+.menu-boton { display: none; }
+
+/* ============================================================
+   PÁGINAS
+   ============================================================ */
+.pagina[hidden] { display: none; }
+
+/* "Sobre mí": foto grande al costado del texto */
+.presentacion.con-foto {
+  display: grid;
+  grid-template-columns: 17rem minmax(0, 1fr);
+  gap: 2.75rem;
+  align-items: start;
+  margin-top: 1.75rem;
+}
+.retrato { margin: 0; }
+
+/* Variante con la foto ancha arriba del texto (photo_wide: true en _config.yml) */
+.presentacion.con-foto.foto-ancha { display: block; }
+.foto-ancha .retrato { max-width: 46rem; margin-bottom: 2.25rem; }
+.foto {
+  display: block;
+  width: 100%;
+  height: auto;             /* respeta la forma de la foto (vertical o cuadrada) */
+  border-radius: 3px;
+  box-shadow: 0.6rem 0.6rem 0 var(--vino-suave);  /* marco vino desplazado */
+}
+.retrato figcaption {
+  margin-top: 1.1rem;
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--gris);
+}
+
+.resumen {
+  max-width: 36rem;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+.resumen p + p { margin-top: 0.8rem; }
+
+.bloque-inicio { margin-top: 2.75rem; }
+
+h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--gris-claro);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 1.45rem;
+  letter-spacing: -0.005em;
+  color: var(--vino);
+}
+
+h3 {
+  margin: 1.9rem 0 0.5rem;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 1.12rem;
+  color: var(--texto);
+}
+h2 + h3 { margin-top: 0.75rem; }
+
+.texto { max-width: 40rem; }
+.texto p + p { margin-top: 0.5rem; }
+
+.entradas { list-style: none; margin: 0; padding: 0; }
+
+/* Cada entrada: fecha a la izquierda, línea vino, contenido a la derecha */
+.entrada {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  column-gap: 1.25rem;
+}
+
+.fecha {
+  padding: 0.6rem 0;
+  text-align: right;
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--gris);
+  font-variant-numeric: tabular-nums;
+}
+
+.cuerpo {
+  padding: 0.5rem 0 0.5rem 1.15rem;
+  border-left: 2px solid var(--vino-suave);
+}
+
+.titulo { font-weight: 600; }
+.pub .titulo { font-weight: 500; }
+.autores strong { font-weight: 600; color: var(--vino); }
+.sede, .autores { color: var(--gris); }
+.detalle p + p { margin-top: 0.3rem; }
+.detalle { overflow-wrap: anywhere; }
+
+.vinculos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1rem;
+  margin-top: 0.15rem;
+  font-family: var(--sans);
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
+/* Botones de descarga del CV en PDF */
+.descargas {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1rem;
+  max-width: 38rem;
+}
+.descarga {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid var(--gris-claro);
+  border-left: 3px solid var(--vino);
+  border-radius: 3px;
+  text-decoration: none;
+}
+.descarga:hover { border-color: var(--vino); background: var(--fondo-lateral); }
+.descarga-nombre { font-family: var(--sans); font-weight: 600; font-size: 1.05rem; color: var(--vino); }
+.descarga-detalle { font-family: var(--sans); font-size: 0.85rem; color: var(--gris); }
+
+/* Enlaces "Anterior" y "Siguiente" al pie de cada página */
+.paso {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gris-claro);
+  font-family: var(--sans);
+}
+.paso:empty { display: none; }
+.paso a { display: flex; flex-direction: column; text-decoration: none; }
+.paso-siguiente { margin-left: auto; text-align: right; }
+.paso-etiqueta { font-size: 0.78rem; color: var(--gris); }
+.paso-nombre { font-size: 1rem; font-weight: 500; color: var(--vino); }
+.paso a:hover .paso-nombre { text-decoration: underline; text-underline-offset: 3px; }
+
+.pie {
+  margin-top: 2rem;
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
+/* ============================================================
+   PANTALLAS MEDIANAS Y CELULARES
+   La columna izquierda pasa arriba y el menú se abre con un botón.
+   ============================================================ */
+@media (max-width: 72rem) and (min-width: 60.01rem) {
+  .presentacion.con-foto { grid-template-columns: 14rem minmax(0, 1fr); gap: 2.25rem; }
+}
+
+@media (max-width: 60rem) {
+  .marco { display: block; min-height: 0; }
+  .lateral-interior { position: static; max-height: none; padding: 1rem 1.25rem 1.25rem; }
+  .identidad { margin-top: 0.9rem; }
+  .presentacion.con-foto { display: block; margin-top: 1.25rem; }
+  .retrato { max-width: 19rem; margin-bottom: 2rem; }
+  .datos { margin-top: 0; }
+  h1 { font-size: 1.6rem; }
+  .menu { margin-top: 1.25rem; }
+
+  .js .menu-boton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.65rem 0.9rem;
+    background: var(--fondo);
+    border: 1px solid var(--gris-claro);
+    border-radius: 6px;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--vino);
+    cursor: pointer;
+  }
+  .menu-icono {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-right: 2px solid var(--gris);
+    border-bottom: 2px solid var(--gris);
+    transform: rotate(45deg) translateY(-25%);
+  }
+  .menu-boton[aria-expanded="true"] .menu-icono { transform: rotate(-135deg); }
+
+  .js .menu-lista {
+    display: none;
+    margin-top: 0.4rem;
+    padding: 0.35rem 0;
+    background: var(--fondo);
+    border: 1px solid var(--gris-claro);
+    border-radius: 6px;
+  }
+  .js .menu-lista.abierta { display: block; }
+  .js .menu-lista a { border-left: none; padding: 0.5rem 0.9rem; }
+  .js .menu-lista a[aria-current="page"] { background: var(--fondo-lateral); }
+
+  .principal { max-width: none; padding: 2rem 1.25rem 1.5rem; }
+}
+
+@media (max-width: 40rem) {
+  body { font-size: 1rem; }
+  .resumen { font-size: 1.08rem; }
+  .entrada {
+    display: block;
+    border-left: 2px solid var(--vino-suave);
+    padding: 0.5rem 0 0.5rem 0.9rem;
+  }
+  .fecha { text-align: left; padding: 0; }
+  .cuerpo { border-left: none; padding: 0.1rem 0 0; }
+}
+
+/* ============================================================
+   IMPRESIÓN (Ctrl+P desde el navegador): imprime todo el CV
+   ============================================================ */
+@media print {
+  body { border-top: none; font-size: 10.5pt; }
+  .marco { display: block; }
+  .lateral { background: none; }
+  .lateral-interior { position: static; max-height: none; padding: 0; }
+  .herramientas, .menu, .paso, .retrato { display: none; }
+  .presentacion.con-foto { display: block; }
+  .identidad { margin-top: 0; }
+  .principal { max-width: none; padding: 1rem 0 0; }
+  .pagina[hidden] { display: block; }
+  .pagina + .pagina { margin-top: 1.5rem; }
+  .entrada { break-inside: avoid; }
+  h2, h3 { break-after: avoid; }
+  a { color: inherit; text-decoration: none; }
+}

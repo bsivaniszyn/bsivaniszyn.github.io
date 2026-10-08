@@ -1,1 +1,2 @@
-# bsivaniszyn.github.io
+# Bárbara S. Ivaniszyn
+Página personal: https://bsivaniszyn.github.io

@@ -1,0 +1,32 @@
+<h2>{{ s.title }}</h2>
+{%- if s.text %}
+<div class="texto">{{ s.text | markdownify }}</div>
+{%- endif %}
+{%- if s.entries %}
+  {%- assign lista = s.entries %}
+  {% include entradas.html %}
+{%- endif %}
+{%- for g in s.groups %}
+<h3>{{ g.title }}</h3>
+  {%- if g.text %}
+  <div class="texto">{{ g.text | markdownify }}</div>
+  {%- endif %}
+  {%- if g.entries %}
+    {%- assign lista = g.entries %}
+    {% include entradas.html %}
+  {%- endif %}
+{%- endfor %}
+{%- if s.downloads %}
+<ul class="descargas">
+  {%- for f in s.downloads %}
+  <li>
+    <a class="descarga" href="{{ f.url | relative_url }}">
+      <span class="descarga-nombre">{{ f.label }}</span>
+      {%- if f.text %}
+      <span class="descarga-detalle">{{ f.text }}</span>
+      {%- endif %}
+    </a>
+  </li>
+  {%- endfor %}
+</ul>
+{%- endif %}

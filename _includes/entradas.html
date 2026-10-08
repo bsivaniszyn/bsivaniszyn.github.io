@@ -1,0 +1,28 @@
+<ul class="entradas">
+  {%- for e in lista %}
+  <li class="entrada{% if e.authors %} pub{% endif %}">
+    <div class="fecha">{{ e.date }}</div>
+    <div class="cuerpo">
+      {%- if e.title %}
+      <p class="titulo">{{ e.title | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      {%- endif %}
+      {%- if e.authors %}
+      <p class="autores">{{ e.authors | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      {%- endif %}
+      {%- if e.where %}
+      <p class="sede">{{ e.where | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+      {%- endif %}
+      {%- if e.text %}
+      <div class="detalle">{{ e.text | markdownify }}</div>
+      {%- endif %}
+      {%- if e.links %}
+      <p class="vinculos">
+        {%- for l in e.links %}
+        <a href="{{ l.url }}">{{ l.label }}</a>
+        {%- endfor %}
+      </p>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ul>

@@ -1,0 +1,11 @@
+# Configuración general del sitio.
+title: "Bárbara S. Ivaniszyn"
+url: "https://bsivaniszyn.github.io"
+baseurl: ""
+
+# Foto de perfil (está en la carpeta files/)
+photo: "/files/foto.jpg"
+
+# Archivos que no se publican en la web
+exclude:
+  - README.md

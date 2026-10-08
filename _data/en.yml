@@ -1,0 +1,224 @@
+# =====================================================================
+#  CV EN INGLÉS
+#  Mismo formato que es.yml (ver las instrucciones al principio de ese
+#  archivo). Cuando agregues algo en es.yml, agregalo también acá.
+# =====================================================================
+
+name: "Bárbara Solange Ivaniszyn"
+role: "CONICET Postdoctoral Fellow and Assistant Professor"
+affiliation: "Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina"
+
+# Ruta del PDF en inglés, por ejemplo "/files/CV_Ivaniszyn_en.pdf". Vacío = sin botón.
+pdf: ""
+
+links:
+  - label: "CONICET profile"
+    url: "https://bicyt.conicet.gov.ar/fichas/p/barbara-solange-ivaniszyn"
+  # - label: "ORCID"
+  #   url: "https://orcid.org/0000-0000-0000-0000"
+  # - label: "Google Scholar"
+  #   url: "https://scholar.google.com/citations?user=XXXX"
+  # - label: "arXiv"
+  #   url: "https://arxiv.org/a/ivaniszyn_b_1"
+
+about: |
+  I am a postdoctoral fellow of the [National Scientific and Technical Research Council (CONICET)](https://www.conicet.gov.ar) and an Assistant Professor at the Facultad de Ingeniería Química (FIQ) of the Universidad Nacional del Litoral (UNL) in Santa Fe, Argentina.
+
+  I work on the numerical analysis of partial differential equations, in particular on the design of convergent methods for geometric flows of surfaces with boundary. You can find my work under [Research](#research).
+
+  **Research interests:** numerical analysis and scientific computing; numerical methods for PDEs; finite element methods; geometric flows; isogeometric analysis and hierarchical splines.
+  
+  **Contact:** [bivaniszyn@fiq.unl.edu.ar](mailto:bivaniszyn@fiq.unl.edu.ar)
+
+# Epígrafe opcional debajo de la foto (vacío "" = sin epígrafe)
+photo_caption: ""
+
+labels:
+  cv: "Curriculum Vitae"
+  other_language: "Español"
+  pdf: "Download CV (PDF)"
+  contents: "CV sections"
+  home: "About me"
+  previous: "Previous"
+  next: "Next"
+  updated: "Updated"
+  month_year_separator: " "
+  months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+sections:
+
+  # -------------------------------------------------------------------
+  - title: "Current positions"
+    home: true
+    short: "Positions"
+    entries:
+      - date: "12/2025 – present"
+        title: "Postdoctoral Fellow, CONICET"
+        where: "Universidad Nacional del Litoral, Santa Fe, Argentina"
+        text: "Advisors: Prof. Dr. Balázs Kovács (Paderborn University) and Dr. Pedro Morin (FIQ-UNL, CONICET)."
+      - date: "09/2025 – present"
+        title: "Assistant Professor (Profesora Adjunta)"
+        where: "Department of Mathematics, Facultad de Ingeniería Química, UNL"
+
+  # -------------------------------------------------------------------
+  - title: "Education"
+    entries:
+      - date: "2025"
+        title: "PhD in Mathematics"
+        where: "Universidad Nacional del Litoral (UNL), Santa Fe, Argentina"
+        text: "Thesis: *A convergent algorithm for the mean curvature flow on surfaces with fixed boundary*. Advisors: Pedro Morin and Sebastián Pauletti."
+        links:
+          - label: "Thesis in the UNL repository"
+            url: "https://bibliotecavirtual.unl.edu.ar/handle/11185/8907"
+      - date: "2016"
+        title: "Degree in Mathematics Teaching (Profesorado en Matemática)"
+        where: "Facultad de Ciencias Exactas, Químicas y Naturales (FCEQyN), Universidad Nacional de Misiones (UNaM)"
+
+  # -------------------------------------------------------------------
+  # RESEARCH: publications and research visits, each as a subsection.
+  - title: "Research"
+    short: "Research"
+    groups:
+      - title: "Peer-reviewed journal articles"
+        entries:
+          - date: "2026"
+            title: "A convergent algorithm for mean curvature flow of surfaces with Dirichlet boundary condition"
+            authors: "**B. S. Ivaniszyn**, P. Morin and M. S. Pauletti"
+            where: "*IMA Journal of Numerical Analysis* (Oxford University Press)."
+            links:
+              - label: "DOI"
+                url: "https://doi.org/10.1093/imanum/drag061"
+
+      - title: "Preprints"
+        entries:
+          - date: "2026"
+            title: "Local power of approximation in hierarchical spline spaces on weakly admissible meshes"
+            authors: "G. A. Fernandez Lezcano, E. M. Garau and **B. S. Ivaniszyn**"
+            links:
+              - label: "arXiv:2604.19555"
+                url: "https://doi.org/10.48550/arXiv.2604.19555"
+
+      - title: "Peer-reviewed conference proceedings"
+        entries:
+          - date: "2025"
+            title: "Quasi-interpolation in hierarchical spline spaces"
+            authors: "E. M. Garau and **B. S. Ivaniszyn**"
+            where: "Short paper. *X Congress of Applied, Computational and Industrial Mathematics (MACI 2025)*, Córdoba, Argentina. ASAMACI."
+
+      - title: "In preparation"
+        entries:
+          - title: "Numerical method for mean curvature flow of surfaces with Neumann boundary"
+            authors: "**B. S. Ivaniszyn**, B. Kovács and P. Morin"
+          - title: "Numerical method for Willmore flow of surfaces with Dirichlet boundary condition"
+            authors: "**B. S. Ivaniszyn**"
+
+      - title: "Thesis"
+        entries:
+          - date: "2025"
+            title: "A convergent algorithm for the mean curvature flow on surfaces with fixed boundary"
+            authors: "**B. S. Ivaniszyn**"
+            where: "PhD thesis in Mathematics, Universidad Nacional del Litoral. Advisors: P. Morin and M. S. Pauletti."
+            links:
+              - label: "UNL repository"
+                url: "https://bibliotecavirtual.unl.edu.ar/handle/11185/8907"
+
+      - title: "Research visits"
+        entries:
+          - date: "09/2026"
+            title: "Paderborn University, Germany"
+            where: "Host: Balázs Kovács."
+            text: "Numerical methods for geometric flows of surfaces with boundary conditions."
+          - date: "10/2023 – 11/2023"
+            title: "Paderborn University, Germany"
+            where: "Host: Balázs Kovács."
+            text: "Numerical methods for geometric flows of surfaces with boundary conditions."
+          - date: "05/2023 – 06/2023"
+            title: "Arizona State University, Tempe, USA"
+            where: "Host: Malena Español."
+            text: "Start of an ongoing collaboration on numerical methods for electrical impedance tomography."
+
+      - title: "Fellowships"
+        entries:
+          - date: "12/2025 – present"
+            title: "CONICET Postdoctoral Fellowship"
+            where: "Universidad Nacional del Litoral."
+            text: "Advisors: Balázs Kovács and Pedro Morin."
+          - date: "04/2019 – 07/2025"
+            title: "CONICET Doctoral Fellowship"
+            where: "Facultad de Ingeniería Química, UNL."
+            text: "Advisors: Pedro Morin and Sebastián Pauletti."
+          - date: "10/2023 – 11/2023"
+            title: "Mobility Grant with a Gender Perspective"
+            where: "Ministry of Production, Science and Technology and Ministry of Equality, Gender and Diversity, Province of Santa Fe."
+            text: "Research visit to Paderborn University, Germany."
+          - date: "05/2023 – 06/2023"
+            title: "Fellowship for academic and professional training abroad"
+            where: "Ministry of Science, Technology and Innovation (MINCyT), Argentina."
+            text: "Research visit to Arizona State University, USA."
+  # -------------------------------------------------------------------
+  - title: "Seminars and conferences"
+    short: "Seminars and conferences"
+    entries:
+      - date: "09/2026"
+        title: "17th International Conference on Free Boundary Problems: Theory and Applications (FBP 2026)"
+        where: "Humboldt University, Berlin, Germany."
+        text: "Talk: *A convergent algorithm for mean curvature flow of surfaces with Dirichlet boundary condition*. With P. Morin and M. S. Pauletti."
+      - date: "01/2026"
+        title: "II Latin American Congress on Industrial and Applied Mathematics (LACIAM 2026)"
+        where: "Universidad Técnica Federico Santa María, Valparaíso, Chile."
+        text: "Poster: *A convergent algorithm for mean curvature flow of surfaces with fixed boundary*."
+      - date: "05/2025"
+        title: "X Congress of Applied, Computational and Industrial Mathematics (MACI 2025)"
+        where: "Córdoba, Argentina."
+        text: "Talk: *Quasi-interpolation in hierarchical spline spaces*. With E. M. Garau."
+      - date: "09/2024"
+        title: "Annual Meeting of the Argentine Mathematical Union (UMA)"
+        where: "Catamarca, Argentina."
+        text: "Talk (in Spanish): *Convergencia de un método numérico para el flujo por curvatura media*."
+      - date: "11/2023"
+        title: "Numerics for PDEs Seminar"
+        where: "Department of Mathematics, Paderborn University, Germany."
+        text: "Talk: *Numerical methods for mean curvature flow with boundary conditions*."
+      - date: "06/2023"
+        title: "Inverse Problems and Imaging Research Group Seminar"
+        where: "School of Mathematical and Statistical Sciences, Arizona State University, USA."
+        text: "Talk: *Numerical approximation for the problem of Electrical Impedance Tomography*."
+      - date: "09/2021"
+        title: "Virtual Annual Meeting of the Argentine Mathematical Union (VirtUMA 2021)"
+        text: "Talk (in Spanish): *Aproximación por elementos isogeométricos para el flujo por curvatura media en superficies*. With S. Pauletti and P. Morin."
+      - date: "09/2020"
+        title: "Virtual Annual Meeting of the Argentine Mathematical Union (VirtUMA 2020)"
+        text: "Talk (in Spanish): *Aproximación por elementos isogeométricos de ecuaciones parabólicas sobre superficies en movimiento*. With S. Pauletti and P. Morin."
+
+  # -------------------------------------------------------------------
+  - title: "Teaching"
+    groups:
+      - title: "Universidad Nacional del Litoral, Facultad de Ingeniería Química"
+        entries:
+          - date: "09/2025 – present"
+            title: "Assistant Professor (Profesora Adjunta)"
+            text: "Single- and multivariable calculus (engineering programs)."
+          - date: "03/2023 – 02/2026"
+            title: "Head Teaching Assistant (Jefa de Trabajos Prácticos)"
+            text: "Single-variable calculus (engineering programs); Basic Mathematics (BSc in Mathematics and BSc in Data Science)."
+          - date: "03/2017 – 02/2023"
+            title: "Teaching Assistant (Ayudante de Cátedra)"
+            text: "Basic Mathematics (BSc in Mathematics and BSc in Data Science); single- and multivariable calculus and numerical methods (engineering programs)."
+
+      - title: "Universidad Nacional de Misiones, Facultad de Ciencias Exactas, Químicas y Naturales"
+        entries:
+          - date: "07/2014 – 02/2017"
+            title: "Teaching Assistant (Auxiliar Docente de Segunda)"
+            text: "Elementos de Matemática and Matemática/92. As an undergraduate student until 08/2016 and as a graduate afterwards."
+
+  # -------------------------------------------------------------------
+  - title: "Full CV"
+    short: "Full CV"
+    text: "Complete version of my CV, including all academic activities."
+    downloads:
+      - label: "CV in English"
+        text: "PDF"
+        url: "/files/CV_Ivaniszyn_en.pdf"
+      - label: "CV in Spanish"
+        text: "PDF, versión en español"
+        url: "/files/CV_Ivaniszyn_es.pdf"
