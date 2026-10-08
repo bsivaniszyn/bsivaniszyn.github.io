@@ -26,8 +26,8 @@ about: |
 
   I work on the numerical analysis of partial differential equations, in particular on the design of convergent methods for geometric flows of surfaces with boundary. You can find my work under [Research](#research).
 
-  **Research interests:** numerical analysis and scientific computing; numerical methods for PDEs; finite element methods; geometric flows; isogeometric analysis and hierarchical splines.
-  
+  **Research interests:** numerical analysis and scientific computing; numerical methods for PDEs; finite element methods; numerical approximation of geometric flows of surfaces; isogeometric analysis and hierarchical splines.
+
   **Contact:** [bivaniszyn@fiq.unl.edu.ar](mailto:bivaniszyn@fiq.unl.edu.ar)
 
 # Epígrafe opcional debajo de la foto (vacío "" = sin epígrafe)
@@ -197,7 +197,7 @@ sections:
       - date: "09/2020"
         title: "Virtual Annual Meeting of the Argentine Mathematical Union (VirtUMA 2020)"
         text: "Talk (in Spanish): *Aproximación por elementos isogeométricos de ecuaciones parabólicas sobre superficies en movimiento*. Joint work with P. Morin and M. S. Pauletti."
-        
+
   # -------------------------------------------------------------------
   - title: "Teaching"
     groups:
