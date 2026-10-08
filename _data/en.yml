@@ -29,7 +29,7 @@ about: |
   **Research interests:** numerical analysis and scientific computing; numerical methods for PDEs; finite element methods; numerical approximation of geometric flows of surfaces; isogeometric analysis and hierarchical splines.
 
   **Contact:** [bivaniszyn@fiq.unl.edu.ar](mailto:bivaniszyn@fiq.unl.edu.ar)
-  
+
 # Epígrafe opcional debajo de la foto (vacío "" = sin epígrafe)
 photo_caption: ""
 
@@ -203,16 +203,16 @@ sections:
             text: "Single- and multivariable calculus (engineering programs)."
           - date: "03/2023 – 02/2026"
             title: "Head Teaching Assistant (Jefa de Trabajos Prácticos)"
-            text: "Single-variable calculus (engineering programs); Basic Mathematics (BSc in Mathematics and BSc in Data Science)."
+            text: "Single-variable calculus (engineering programs); precalculus and basic linear algebra (BSc in Mathematics and BSc in Data Science)."
           - date: "03/2017 – 02/2023"
             title: "Teaching Assistant (Ayudante de Cátedra)"
-            text: "Basic Mathematics (BSc in Mathematics and BSc in Data Science); single- and multivariable calculus and numerical methods (engineering programs)."
+            text: "Precalculus and basic linear algebra (BSc in Mathematics and BSc in Data Science); single- and multivariable calculus and numerical methods (engineering programs)."
 
       - title: "Universidad Nacional de Misiones, Facultad de Ciencias Exactas, Químicas y Naturales"
         entries:
           - date: "07/2014 – 02/2017"
             title: "Teaching Assistant (Auxiliar Docente de Segunda)"
-            text: "Elementos de Matemática and Matemática/92. As an undergraduate student until 08/2016 and as a graduate afterwards."
+            text: "Precalculus and single-variable calculus. As an undergraduate student until 08/2016 and as a graduate afterwards."
 
   # -------------------------------------------------------------------
   - title: "Full CV"

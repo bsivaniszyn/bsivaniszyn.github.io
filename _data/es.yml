@@ -226,19 +226,19 @@ sections:
         entries:
           - date: "09/2025 – presente"
             title: "Profesora Adjunta"
-            text: "Cálculo en una y varias variables (carreras de Ingeniería)."
+            text: "Cálculo en una y varias variables (carreras de ingeniería)."
           - date: "03/2023 – 02/2026"
             title: "Jefa de Trabajos Prácticos"
-            text: "Cálculo en una variable (carreras de Ingeniería); Matemática Básica (Licenciatura en Matemática y Licenciatura en Ciencia de Datos)."
+            text: "Cálculo en una variable (carreras de ingeniería); precálculo y álgebra lineal básica (Licenciatura en Matemática y Licenciatura en Ciencia de Datos)."
           - date: "03/2017 – 02/2023"
             title: "Ayudante de Cátedra"
-            text: "Matemática Básica (Licenciatura en Matemática y Licenciatura en Ciencia de Datos); Cálculo en una y varias variables y métodos numéricos (carreras de Ingeniería)."
-
+            text: "Precálculo y álgebra lineal básica (Licenciatura en Matemática y Licenciatura en Ciencia de Datos); cálculo en una y varias variables y métodos numéricos (carreras de ingeniería)."          
+      
       - title: "Universidad Nacional de Misiones, Facultad de Ciencias Exactas, Químicas y Naturales"
         entries:
           - date: "07/2014 – 02/2017"
             title: "Auxiliar Docente de Segunda"
-            text: "Elementos de Matemática y Matemática/92. Como estudiante hasta 08/2016 y como graduada desde entonces."
+            text: "Precálculo y cálculo en una variable. Como estudiante hasta 08/2016 y como graduada desde entonces."
             
   # -------------------------------------------------------------------
   # CV completo en PDF: subí los archivos a la carpeta files/ con estos
