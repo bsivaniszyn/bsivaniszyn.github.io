@@ -105,6 +105,7 @@ sections:
   # INVESTIGACIÓN: publicaciones y estancias, cada una como subsección.
   - title: "Investigación"
     short: "Investigación"
+    text: "Mi trabajo se centra en métodos numéricos para flujos geométricos de superficies con borde, como el flujo por curvatura media, la difusión superficial y el flujo de Willmore. También trabajo en análisis isogeométrico con splines jerárquicos y en métodos numéricos para tomografía de impedancia eléctrica."
     groups:
       - title: "Artículos en revistas con referato"
         entries:
@@ -132,12 +133,6 @@ sections:
             authors: "E. M. Garau y **B. S. Ivaniszyn**"
             where: "Trabajo corto. *X Congreso de Matemática Aplicada, Computacional e Industrial (MACI 2025)*, Córdoba, Argentina. ASAMACI."
 
-      - title: "Trabajos en preparación"
-        entries:
-          - title: "Numerical method for mean curvature flow of surfaces with Neumann boundary"
-            authors: "**B. S. Ivaniszyn**, B. Kovács y P. Morin"
-          - title: "Numerical method for Willmore flow of surfaces with Dirichlet boundary condition"
-            authors: "**B. S. Ivaniszyn**"
 
       - title: "Tesis"
         entries:

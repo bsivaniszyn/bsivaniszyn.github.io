@@ -78,6 +78,7 @@ sections:
   # RESEARCH: publications and research visits, each as a subsection.
   - title: "Research"
     short: "Research"
+    text:  "My work focuses on numerical methods for geometric flows of surfaces with boundary, such as mean curvature flow, surface diffusion and Willmore flow. I also work on isogeometric analysis with hierarchical splines and on numerical methods for electrical impedance tomography." 
     groups:
       - title: "Peer-reviewed journal articles"
         entries:
@@ -105,12 +106,6 @@ sections:
             authors: "E. M. Garau and **B. S. Ivaniszyn**"
             where: "Short paper. *X Congress of Applied, Computational and Industrial Mathematics (MACI 2025)*, Córdoba, Argentina. ASAMACI."
 
-      - title: "In preparation"
-        entries:
-          - title: "Numerical method for mean curvature flow of surfaces with Neumann boundary"
-            authors: "**B. S. Ivaniszyn**, B. Kovács and P. Morin"
-          - title: "Numerical method for Willmore flow of surfaces with Dirichlet boundary condition"
-            authors: "**B. S. Ivaniszyn**"
 
       - title: "Thesis"
         entries:
