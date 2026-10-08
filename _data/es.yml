@@ -183,7 +183,7 @@ sections:
             where: "Ministerio de Ciencia, Tecnología e Innovación (MINCyT)."
             text: "Estancia en Arizona State University, Estados Unidos."
   # -------------------------------------------------------------------
-  -   - title: "Seminarios y congresos"
+  - title: "Seminarios y congresos"
     short: "Seminarios y congresos"
     entries:
       - date: "09/2026"
