@@ -5,7 +5,7 @@
 # =====================================================================
 
 name: "Bárbara Solange Ivaniszyn"
-role: "CONICET Postdoctoral Fellow and Assistant Professor"
+role: "CONICET Postdoctoral Fellow and Adjunct Professor"
 affiliation: "Facultad de Ingeniería Química, Universidad Nacional del Litoral, Santa Fe, Argentina"
 
 # Ruta del PDF en inglés, por ejemplo "/files/CV_Ivaniszyn_en.pdf". Vacío = sin botón.
@@ -22,7 +22,7 @@ links:
   #   url: "https://arxiv.org/a/ivaniszyn_b_1"
 
 about: |
-  I am a postdoctoral fellow of the [National Scientific and Technical Research Council (CONICET)](https://www.conicet.gov.ar) and an Assistant Professor at the Facultad de Ingeniería Química (FIQ) of the Universidad Nacional del Litoral (UNL) in Santa Fe, Argentina.
+  I am a postdoctoral fellow of the [National Scientific and Technical Research Council (CONICET)](https://www.conicet.gov.ar) and a part-time Adjunct Professor at the Facultad de Ingeniería Química (FIQ) of the Universidad Nacional del Litoral (UNL) in Santa Fe, Argentina.
 
   I work on the numerical analysis of partial differential equations. My main line of research is the study and analysis of numerical methods for geometric flows of surfaces with boundary. More details under [Research](#research).
 
@@ -57,7 +57,7 @@ sections:
         where: "Universidad Nacional del Litoral, Santa Fe, Argentina"
         text: "Advisors: Prof. Dr. Balázs Kovács (Paderborn University) and Dr. Pedro Morin (FIQ-UNL, CONICET)."
       - date: "09/2025 – present"
-        title: "Assistant Professor (Profesora Adjunta)"
+        title: "Adjunct Professor, part-time (Profesora Adjunta)"
         where: "Department of Mathematics, Facultad de Ingeniería Química, UNL"
 
   # -------------------------------------------------------------------
@@ -199,7 +199,7 @@ sections:
       - title: "Universidad Nacional del Litoral, Facultad de Ingeniería Química"
         entries:
           - date: "09/2025 – present"
-            title: "Assistant Professor (Profesora Adjunta)"
+            title: "Adjunct Professor, part-time (Profesora Adjunta)"
             text: "Single- and multivariable calculus (engineering programs)."
           - date: "03/2023 – 02/2026"
             title: "Head Teaching Assistant (Jefa de Trabajos Prácticos)"
