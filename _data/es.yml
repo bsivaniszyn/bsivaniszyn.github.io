@@ -40,12 +40,12 @@ links:
 about: |
   Soy becaria posdoctoral del [Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET)](https://www.conicet.gov.ar) y Profesora Adjunta en la Facultad de Ingeniería Química (FIQ) de la Universidad Nacional del Litoral (UNL), en Santa Fe, Argentina.
 
-  Trabajo en análisis numérico de ecuaciones diferenciales parciales, en particular en el diseño de métodos convergentes para flujos geométricos de superficies con borde. Mis trabajos están en [Investigación](#investigacion).
+  Trabajo en análisis numérico de ecuaciones diferenciales parciales. Mi línea principal es el estudio y análisis de métodos numéricos para flujos geométricos de superficies con borde. Más detalles en [Investigación](#investigacion).
 
   **Intereses de investigación:** análisis numérico y computación científica; métodos numéricos para EDPs; métodos de elementos finitos; aproximación numérica de flujos geométricos de superficies; análisis isogeométrico y splines jerárquicos.
 
   **Contacto:** [bivaniszyn@fiq.unl.edu.ar](mailto:bivaniszyn@fiq.unl.edu.ar)
-
+  
 # Epígrafe opcional debajo de la foto (si no lo querés, dejalo vacío: "")
 photo_caption: ""
 
@@ -105,7 +105,7 @@ sections:
   # INVESTIGACIÓN: publicaciones y estancias, cada una como subsección.
   - title: "Investigación"
     short: "Investigación"
-    text: "Mi trabajo se centra en métodos numéricos para flujos geométricos de superficies con borde, como el flujo por curvatura media, la difusión superficial y el flujo de Willmore. También trabajo en análisis isogeométrico con splines jerárquicos y en métodos numéricos para tomografía de impedancia eléctrica."
+    text: "Mi trabajo se centra en métodos numéricos para flujos geométricos de superficies con borde, como el flujo por curvatura media, la difusión superficial y el flujo de Willmore. Además, colaboro en proyectos sobre análisis isogeométrico con splines jerárquicos y sobre métodos numéricos para tomografía de impedancia eléctrica."
     groups:
       - title: "Artículos en revistas con referato"
         entries:

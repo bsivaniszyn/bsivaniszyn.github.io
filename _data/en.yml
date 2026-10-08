@@ -24,12 +24,12 @@ links:
 about: |
   I am a postdoctoral fellow of the [National Scientific and Technical Research Council (CONICET)](https://www.conicet.gov.ar) and an Assistant Professor at the Facultad de Ingeniería Química (FIQ) of the Universidad Nacional del Litoral (UNL) in Santa Fe, Argentina.
 
-  I work on the numerical analysis of partial differential equations, in particular on the design of convergent methods for geometric flows of surfaces with boundary. You can find my work under [Research](#research).
+  I work on the numerical analysis of partial differential equations. My main line of research is the study and analysis of numerical methods for geometric flows of surfaces with boundary. More details under [Research](#research).
 
   **Research interests:** numerical analysis and scientific computing; numerical methods for PDEs; finite element methods; numerical approximation of geometric flows of surfaces; isogeometric analysis and hierarchical splines.
 
   **Contact:** [bivaniszyn@fiq.unl.edu.ar](mailto:bivaniszyn@fiq.unl.edu.ar)
-
+  
 # Epígrafe opcional debajo de la foto (vacío "" = sin epígrafe)
 photo_caption: ""
 
@@ -78,7 +78,7 @@ sections:
   # RESEARCH: publications and research visits, each as a subsection.
   - title: "Research"
     short: "Research"
-    text:  "My work focuses on numerical methods for geometric flows of surfaces with boundary, such as mean curvature flow, surface diffusion and Willmore flow. I also work on isogeometric analysis with hierarchical splines and on numerical methods for electrical impedance tomography." 
+    text: "My work focuses on numerical methods for geometric flows of surfaces with boundary, such as mean curvature flow, surface diffusion and Willmore flow. I also collaborate on projects on isogeometric analysis with hierarchical splines and on numerical methods for electrical impedance tomography."    
     groups:
       - title: "Peer-reviewed journal articles"
         entries:
